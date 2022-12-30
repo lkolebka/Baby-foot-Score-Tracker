@@ -51,7 +51,7 @@ margin-top: 00px;
     }
 
     .button {
-      background-color: #4cc366;
+      background-color: #116AFF;
       border: none;
       color: white;
       padding: 20px 42px;
@@ -64,7 +64,7 @@ margin-top: 00px;
     }
 
     .button:hover {
-      background-color: #45a049;
+      background-color: #116AFF;
     }
   </style>
 </head>
