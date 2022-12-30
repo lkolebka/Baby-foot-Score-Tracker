@@ -1,134 +1,161 @@
-
 <!DOCTYPE html>
 
 <html>
+    
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="styles.css">
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Hiding the webhost tag -->
+    <style> img[alt="www.000webhost.com"]{display:none;} </style>
+    
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Link to styles.css file -->
+    <link rel="stylesheet" href="styles.css">
+  
+    <!-- Page title -->
+    <title>Baby foot form</title>
 
 </head>
 <body>
+    <!-- Form for submitting babyfoot match results -->
+    <form action="process-form.php" method="post">
+        <!-- Team A input fields -->
+        <div id="team-a">
+            <!-- Form title -->
+            <h1>Baby foot form</h1>
+            <!-- Team A title -->
+            <h2>Team A</h2>
 
-  
-  
+            <!-- Player A name input -->
+            <select id="team_a_player_a" name="team_a_player_a" required>
+                <!-- Default empty option -->
+                <option value="" selected="selected"></option>
+                <!-- List of possible player names -->
+                <option value="anais">Anais</option>
+                <option value="elie">Elie</option>
+                <option value="gabriel">Gabriel</option>
+                <option value="guest">Guest</option>
+                <option value="jeremy">Jeremy</option>
+                <option value="lante">Lante</option>
+                <option value="lazare">Lazare</option>
+                <option value="luna">Luna</option>
+                <option value="malik">Malik</option>
+                <option value="matthieu">Matthieu</option>
+                <option value="michael">Michael</option>
+                <option value="nathan">Nathan</option>
+                <option value="nathanael">Nathanael</option>
+                <option value="wissam">Wissam</option>
+                <option value="yassine">Yassine</option>
+            </select>
+            <!-- Line break -->
+            <br>
 
-
-  <form action="process-form.php" method="post">
-      
-      
-    <div id="team-a">
-    <h1>Baby foot form</h1>
-      <h2>Team A</h2>
-
-      <select id="team_a_player_a" name="team_a_player_a" required>
-    <option value="" selected="selected"></option>
-  <option value="anais">Anais</option>
-  <option value="elie">Elie</option>
-  <option value="gabriel">Gabriel</option>
-  <option value="guest">Guest</option>
-  <option value="jeremy">Jeremy</option>
-  <option value="lante">Lante</option>
-  <option value="lazare">Lazare</option>
-  <option value="luna">Luna</option>
-  <option value="malik">Malik</option>
-  <option value="matthieu">Matthieu</option>
-  <option value="michael">Michael</option>
-  <option value="nathan">Nathan</option>
-  <option value="nathanael">Nathanael</option>
-  <option value="wissam">Wissam</option>
-  <option value="yassine">Yassine</option>
-      </select>
-      <br>
-
-      <select id="team_a_player_b" name="team_a_player_b" required>
-            <option value="" selected="selected"></option>
-         <option value="anais">Anais</option>
-  <option value="elie">Elie</option>
-  <option value="gabriel">Gabriel</option>
-  <option value="guest">Guest</option>
-  <option value="jeremy">Jeremy</option>
-  <option value="lante">Lante</option>
-  <option value="lazare">Lazare</option>
-  <option value="luna">Luna</option>
-  <option value="malik">Malik</option>
-  <option value="matthieu">Matthieu</option>
-  <option value="michael">Michael</option>
-  <option value="nathan">Nathan</option>
-  <option value="nathanael">Nathanael</option>
-  <option value="wissam">Wissam</option>
-  <option value="yassine">Yassine</option>
-      </select>
-      <br>
-      <h4>Score: </h4>
-      <input 
-      type="number"
-      id="score_a"
-      name="score_a"
-      max="11"
-      min="0"
-      required=""
-      placeholder="0"
+            <!-- Player B name input -->
+            <select id="team_a_player_b" name="team_a_player_b" required>
+                <!-- Default empty option -->
+                <option value="" selected="selected"></option>
+                <!-- List of possible player names -->
+                <option value="elie">Elie</option>
+                <option value="gabriel">Gabriel</option>
+                <option value="guest">Guest</option>
+                <option value="jeremy">Jeremy</option>
+                <option value="lante">Lante</option>
+                <option value="lazare">Lazare</option>
+                <option value="luna">Luna</option>
+                <option value="malik">Malik</option>
+                <option value="matthieu">Matthieu</option>
+                <option value="michael">Michael</option>
+                <option value="nathan">Nathan</option>
+                <option value="nathanael">Nathanael</option>
+                <option value="wissam">Wissam</option>
+                <option value="yassine">Yassine</option>
+            </select>
+            <!-- Line break -->
+            <br>
+            <!-- Score input label -->
+            <h4>Score: </h4>
+            <!-- Score input field -->
+            <input 
+                type="number"
+                id="score_a"
+                name="score_a"
+                max="11"
+                min="0"
+                required=""
+                placeholder="0"
+            />
+        </div>
+        <!-- Team B input fields -->
+        <div id="team-b">
+            <!-- Team B title -->
+            <h2>Team B</h2>
+            <!-- Player A name input -->
+            <select id="team_b_player_a" name="team_b_player_a" required>
+                <!-- Default empty option -->
+                <option value="" selected="selected"></option>
+                <!-- List of possible player names -->
+                <option value="elie">Elie</option>
+                <option value="gabriel">Gabriel</option>
+                <option value="guest">Guest</option>
+                <option value="jeremy">Jeremy</option>
+                <option value="lante">Lante</option>
+                <option value="lazare">Lazare</option>
+                <option value="luna">Luna</option>
+                <option value="malik">Malik</option>
+                <option value="matthieu">Matthieu</option>
+                <option value="michael">Michael</option>
+                <option value="nathan">Nathan</option>
+                <option value="nathanael">Nathanael</option>
+                <option value="wissam">Wissam</option>
+                <option value="yassine">Yassine</option>
+            </select>
+            <!-- Line break -->
+            <br>
+            <!-- Player B name input -->
+            <select id="team_b_player_b" name="team_b_player_b" required>
+                <!-- Default empty option -->
+                <option value="" selected="selected"></option>
+                <!-- List of possible player names -->
+                <option value="anais">Anais</option>
+                <option value="elie">Elie</option>
+                <option value="gabriel">Gabriel</option>
+                <option value="guest">Guest</option>
+                <option value="jeremy">Jeremy</option>
+                <option value="lante">Lante</option>
+                <option value="lazare">Lazare</option>
+                <option value="luna">Luna</option>
+                <option value="malik">Malik</option>
+                <option value="matthieu">Matthieu</option>
+                <option value="michael">Michael</option>
+                <option value="nathan">Nathan</option>
+                <option value="nathanael">Nathanael</option>
+                <option value="wissam">Wissam</option>
+                <option value="yassine">Yassine</option>
+            </select>
+            <!-- Line break -->
+            <br>
+            <!-- Score input label -->
+            <h4>Score: </h4>
+            <!-- Score input field -->
+            <input 
+                type="number"
+                id="score_b"
+                name="score_b"
+                max="11"
+                min="0"
+                required=""
+                placeholder="0"
+            />
+        </div>
    
-      />
-    </div>
-    <div id="team-b">
-      <h2>Team B</h2>
-      <select id="team_b_player_a" name="team_b_player_a" required>
-              <option value="" selected="selected"></option>
-         <option value="anais">Anais</option>
-  <option value="elie">Elie</option>
-  <option value="gabriel">Gabriel</option>
-  <option value="guest">Guest</option>
-  <option value="jeremy">Jeremy</option>
-  <option value="lante">Lante</option>
-  <option value="lazare">Lazare</option>
-  <option value="luna">Luna</option>
-  <option value="malik">Malik</option>
-  <option value="matthieu">Matthieu</option>
-  <option value="michael">Michael</option>
-  <option value="nathan">Nathan</option>
-  <option value="nathanael">Nathanael</option>
-  <option value="wissam">Wissam</option>
-  <option value="yassine">Yassine</option>
-      </select>
-      <br>
-    
-      <select id="team_b_player_b" name="team_b_player_b" required>
-              <option value="" selected="selected"></option>
-      <option value="anais">Anais</option>
-  <option value="elie">Elie</option>
-  <option value="gabriel">Gabriel</option>
-  <option value="guest">Guest</option>
-  <option value="jeremy">Jeremy</option>
-  <option value="lante">Lante</option>
-  <option value="lazare">Lazare</option>
-  <option value="luna">Luna</option>
-  <option value="malik">Malik</option>
-  <option value="matthieu">Matthieu</option>
-  <option value="michael">Michael</option>
-  <option value="nathan">Nathan</option>
-  <option value="nathanael">Nathanael</option>
-  <option value="wissam">Wissam</option>
-  <option value="yassine">Yassine</option>
-      </select>
-      <br>
-      <h4>Score: </h4>
-      <input 
-      type="number"
-          name="score_b"
-      id="score_b"
-      max="11"
-      min="0"
-      required=""
-      placeholder="0"
-      class="score_b"
-      />
-    </div>
-   
-    <input type="submit" value="Submit">
-    </form>
+              <!-- Submit button -->
+      <input type="submit" value="Submit">
+      </form>
     </body>
-    </html>
-
-
+</html>
