@@ -19,7 +19,8 @@ margin-top: 00px;
 form {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
   width: 80vw; /* changed from 500px to 100vw to make the form container take up the full width of the viewport */
-  height : 80vh; /* size of the blox */
+ /* height : 80vh; /* size of the blox */
+  margin-bottom: 20px;
   margin: 0 auto;
   text-align: center;
   border: 2px solid #ccc;
@@ -90,11 +91,17 @@ input[type="submit"] {
 
   
   color: #ffffff;
+  margin: 0 auto; /* centers the page horizontally */
   width: 80%;
   height: 50px;
   font-size: 20px;
-  margin: 30px;
+  margin: 15px;
   text-align: center;
   border-color: #ffffff;
   background-color: #116AFF;
 }
+
+
+
+
+
