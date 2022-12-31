@@ -38,14 +38,20 @@ mysqli_close($conn);
 
     <!-- Hiding the webhost tag --> 
     <style> img[alt="www.000webhost.com"]{display:none;} </style>
-    
+    <head>
   <style>
+
+body {
+  overflow-x: hidden; /* prevents horizontal scrolling */
+  max-width: 1200px; /* sets a maximum width for the page */
+  margin: 0 auto; /* centers the page horizontally */
+}
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+
     }
 
     .message {
@@ -53,25 +59,27 @@ mysqli_close($conn);
 margin-top: 00px;
   color: #333; /* added color to heading */
   font-size: 35px;
-  align-self: center;
+  /* align-self: center;*/
   font-style: normal;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
     }
 
-    .button {
-      background-color: #116AFF;
-      border: none;
-      color: white;
-      padding: 20px 42px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 45px;
-      cursor: pointer;
-      border-radius: 8px;
-    }
+  .button {
+  margin: 0 auto; /* centers the page horizontally */
+  color: #ffffff;
+  width: 80%;
+  height: 128px;
+  font-size: 50px;
+  margin: 15px;
+  margin-top : 570px;
+  text-align: center;
+  border-color: #ffffff;
+  background-color: #116AFF;
+  border-radius: 20px;
+  font-weight: bold; /* makes the text bolder */
+}
 
     .button:hover {
       background-color: #116AFF;
@@ -82,6 +90,7 @@ margin-top: 00px;
   <div class="container">
     <div class="message">
 <h2>Thank you for submitting the results!</h2>
+
 
 <!-- Display the result --> 
 <h3>Your upload: </h3>
@@ -100,12 +109,31 @@ margin-top: 00px;
       <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px; text-align: center;"><?php echo $score_b; ?></td>
     </tr>
   </table>
-  <br>
-  <br>
+
 </div>
+
+<!-- Add introduction sentence -->
+<p style="font-weight: lighter; font-size: smaller; color: #666;">Wrong upload ?</br>You can cancel it and do a new one:</br>
 
 <!-- Add cancel button -->
 <button class="cancel-button" onclick="deleteLastMatch()">Cancel</button>
+
+<style>
+  .cancel-button {
+    background-color: #F25E6B;
+    border: none;
+    color: #ffffff;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 2px 2px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+</style>
 
 <script>
   function deleteLastMatch() {
@@ -126,7 +154,9 @@ margin-top: 00px;
 
 <br>
   <br>
-
+ <br>
+ <br>
+ <br>
 <form action="index.html">
   <button class="button">Go back</button>
 </form>
