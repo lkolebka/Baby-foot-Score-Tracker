@@ -1,6 +1,5 @@
 <?php
 // Connect to the database
-
 $servername = "localhost";
 $username = "id20071036_lazare";
 $password = "wncodf51KT~[ilmo";
@@ -14,17 +13,24 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// Retrieve the most recent result from the database
+$query = "SELECT * FROM babyfoot_results ORDER BY date DESC LIMIT 1";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
 
-// Retrieve the form data
-$date = date("Y-m-d H:i:s");
-$team_a_player_a = mysqli_real_escape_string($conn, $_POST['team_a_player_a']);
-$team_a_player_b = mysqli_real_escape_string($conn, $_POST['team_a_player_b']);
-$team_b_player_a = mysqli_real_escape_string($conn, $_POST['team_b_player_a']);
-$team_b_player_b = mysqli_real_escape_string($conn, $_POST['team_b_player_b']);
-$score_a = intval($_POST['score_a']);
-$score_b = intval($_POST['score_b']);
+// Extract the data from the result row
+$date = $row['date'];
+$team_a_player_a = $row['team_a_player_a'];
+$team_a_player_b = $row['team_a_player_b'];
+$team_b_player_a = $row['team_b_player_a'];
+$team_b_player_b = $row['team_b_player_b'];
+$score_a = $row['score_a'];
+$score_b = $row['score_b'];
 
+// Close the database connection
+mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -76,10 +82,30 @@ margin-top: 00px;
   <div class="container">
     <div class="message">
 <h2>Thank you for submitting the results!</h2>
-    </div>
-    <form action="index.html">
-      <button class="button">Go back</button>
-    </form>
-  </div>
-</body>
+
+<!-- Display the result -->
+<h3>Your upload: </h3>
+<div class="result" style="text-align: left;">
+  <table style="width: 80%; margin: 0 auto; border-collapse: separate; border-spacing: 0;">
+    <tr>
+      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center; padding: 10px 20px;">Players</th>
+      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center;padding: 10px 20px;">Score</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_a_player_a; ?> and <?php echo $team_a_player_b; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; adding: 10px 20px; text-align: center;"><?php echo $score_a; ?></td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_b_player_a; ?> and <?php echo $team_b_player_b; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px; text-align: center;"><?php echo $score_b; ?></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+</div>
+<form action="index.html">
+  <button class="button">Go back</button>
+</form>
+
+
 </html>
