@@ -1,6 +1,6 @@
 <?php
 
-header('Location: https://hays-babyfoot.000webhostapp.com/thanks.php');
+header('Location: http://baby-foot-brussels.fun/thanks.php');
 
 
 // Connect to the database

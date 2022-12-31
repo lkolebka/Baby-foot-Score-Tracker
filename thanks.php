@@ -105,15 +105,30 @@ margin-top: 00px;
 </div>
 
 <!-- Add cancel button -->
-<form action="cancel.php" method="post">
-  <input type="submit" value="Cancel" class="button">
-  <br>
+<button class="cancel-button" onclick="deleteLastMatch()">Cancel</button>
+
+<script>
+  function deleteLastMatch() {
+    if (confirm('Are you sure you want to cancel the last match?')) {
+      // Send an HTTP request to the PHP script to delete the last match
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          // Display a message indicating that the match was deleted successfully
+          alert(this.responseText);
+        }
+      };
+      xhttp.open("GET", "delete-last-match.php", true);
+      xhttp.send();
+    }
+  }
+</script>
+
+<br>
   <br>
 
 <form action="index.html">
   <button class="button">Go back</button>
 </form>
-
-
 
 </html>
