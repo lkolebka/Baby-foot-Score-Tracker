@@ -73,7 +73,7 @@ margin-top: 00px;
   height: 128px;
   font-size: 50px;
   margin: 15px;
-  margin-top : 570px;
+  margin-top : 30.45vh;
   text-align: center;
   border-color: #ffffff;
   background-color: #116AFF;
