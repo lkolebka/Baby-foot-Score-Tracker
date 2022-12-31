@@ -1,5 +1,5 @@
 <?php
-// Connect to the database
+// Connect to the database 
 $servername = "localhost";
 $username = "id20071036_lazare";
 $password = "wncodf51KT~[ilmo";
