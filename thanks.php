@@ -1,6 +1,5 @@
 <?php
 // Connect to the database
-
 $servername = "localhost";
 $username = "id20071036_lazare";
 $password = "wncodf51KT~[ilmo";
@@ -14,6 +13,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+// Retrieve the most recent result from the database
+$query = "SELECT * FROM babyfoot_results ORDER BY date DESC LIMIT 1";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
 
 // Retrieve the form data
 $date = date("Y-m-d H:i:s");
@@ -24,7 +27,10 @@ $team_b_player_b = mysqli_real_escape_string($conn, $_POST['team_b_player_b']);
 $score_a = intval($_POST['score_a']);
 $score_b = intval($_POST['score_b']);
 
+// Close the database connection
+mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html>
