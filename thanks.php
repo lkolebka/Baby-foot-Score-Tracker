@@ -83,10 +83,10 @@ margin-top: 00px;
     <div class="message">
 <h2>Thank you for submitting the results!</h2>
 
-<!-- Display the result -->
+<!-- Display the result --> 
 <h3>Your upload: </h3>
 <div class="result" style="text-align: left;">
-  <table style="width: 80%; margin: 0 auto; border-collapse: separate; border-spacing: 0;">
+  <table style="width: 80%; margin: 0 auto; border-collapse: separate; border-spacing: 0;border: 1px solid black;">
     <tr>
       <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center; padding: 10px 20px;">Players</th>
       <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center;padding: 10px 20px;">Score</th>
@@ -103,9 +103,17 @@ margin-top: 00px;
   <br>
   <br>
 </div>
+
+<!-- Add cancel button -->
+<form action="cancel.php" method="post">
+  <input type="submit" value="Cancel" class="button">
+  <br>
+  <br>
+
 <form action="index.html">
   <button class="button">Go back</button>
 </form>
+
 
 
 </html>
