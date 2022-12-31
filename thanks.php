@@ -84,20 +84,20 @@ margin-top: 00px;
 <h2>Thank you for submitting the results!</h2>
 
 <!-- Display the result -->
-<h3>Match report:</h3>
+<h3>Your upload: </h3>
 <div class="result" style="text-align: left;">
-  <table style="width: 80%; margin: 0 auto; border: 1px solid black;">
+  <table style="width: 80%; margin: 0 auto; border-collapse: separate; border-spacing: 0;">
     <tr>
-      <th>Players</th>
-      <th>Score</th>
+      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center; padding: 10px 20px;">Players</th>
+      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center;padding: 10px 20px;">Score</th>
     </tr>
     <tr>
-      <td><?php echo $team_a_player_a; ?> and <?php echo $team_a_player_b; ?></td>
-      <td><?php echo $score_a; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_a_player_a; ?> and <?php echo $team_a_player_b; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; adding: 10px 20px; text-align: center;"><?php echo $score_a; ?></td>
     </tr>
     <tr>
-      <td><?php echo $team_b_player_a; ?> and <?php echo $team_b_player_b; ?></td>
-      <td><?php echo $score_b; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_b_player_a; ?> and <?php echo $team_b_player_b; ?></td>
+      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px; text-align: center;"><?php echo $score_b; ?></td>
     </tr>
   </table>
   <br>
