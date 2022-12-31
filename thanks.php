@@ -29,6 +29,10 @@ $score_b = intval($_POST['score_b']);
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- Hiding the webhost tag --> 
+    <style> img[alt="www.000webhost.com"]{display:none;} </style>
+    
   <style>
     .container {
       display: flex;
