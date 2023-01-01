@@ -91,14 +91,23 @@ input[type="submit"] {
 
   
   color: #ffffff;
-  margin: 0 auto; /* centers the page horizontally */
+    margin: 0 auto; /* centers the page horizontally */
+  color: #ffffff;
   width: 80%;
   height: 50px;
   font-size: 20px;
-  margin: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2.5%;
   text-align: center;
-  border-color: #ffffff;
   background-color: #116AFF;
+  border-radius: 20px;
+  font-weight: bold; /* makes the text bolder */
+  
 }
 
 
