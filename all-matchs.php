@@ -9,25 +9,31 @@
     .result-table-heading {
     margin-bottom: px;
     margin-top: 00px;
-    color: #333; /* added color to heading */
-    font-size: 35px;
-    /* align-self: center;*/
+    color: #333; 
     font-style: normal;
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 700;
+    display: block;
+    font-size: 5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
 
     }
 
 
     .result-table {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       border-collapse: separate;
       border-spacing: 0;
       border: 1px solid black;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
-
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
     .result-table th {
       border: 1px solid black;
@@ -40,6 +46,7 @@
     }
     .result-table td {
       border: 1px solid black;
+      font-size: 25px;
       font-weight: normal;
       color: system-ui;
       padding: 10px 20px;

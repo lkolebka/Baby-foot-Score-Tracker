@@ -72,16 +72,14 @@ margin-top: 00px;
   width: 80%;
   height: 128px;
   font-size: 50px;
-  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 2.5%;
   text-align: center;
-  border-color: #ffffff;
   background-color: #116AFF;
   border-radius: 20px;
   font-weight: bold; /* makes the text bolder */
@@ -92,29 +90,57 @@ margin-top: 00px;
     }
   </style>
 </head>
+
+<h2 class="result-table-heading">Thank you for submitting the results!</h2>
+<style> 
+
+.result-table-heading {
+margin-bottom: px;
+margin-top: 00px;
+color: #333; 
+font-style: normal;
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans","Droid Sans", "Helvetica Neue", sans-serif;
+font-weight: 700;
+display: block;
+font-size: 5em;
+margin-block-start: 0.83em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+
+
+}
+</style>
 <body>
   <div class="container">
     <div class="message">
-<h2>Thank you for submitting the results!</h2>
+
 
 
 <!-- Display the result --> 
 <h3>Your upload: </h3>
 <div class="result" style="text-align: left;">
-  <table style="width: 80%; margin: 0 auto; border-collapse: separate; border-spacing: 0;border: 1px solid black;">
+<table style="
+  width: 100%; 
+  border-collapse: separate; 
+  border-spacing: 0; 
+  border: 1px solid black; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <tr>
-      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center; padding: 10px 20px;">Players</th>
-      <th style="border: 1px solid black; font-size: 35px; font-weight: Medium;text-align: center;padding: 10px 20px;">Score</th>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_a_player_a; ?> and <?php echo $team_a_player_b; ?></td>
-      <td style="border: 1px solid black; font-weight: normal; color: system-ui; adding: 10px 20px; text-align: center;"><?php echo $score_a; ?></td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px;"><?php echo $team_b_player_a; ?> and <?php echo $team_b_player_b; ?></td>
-      <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 10px 20px; text-align: center;"><?php echo $score_b; ?></td>
-    </tr>
-  </table>
+    <th style="border: 1px solid black; font-size: 35px; font-weight: Medium; text-align: center; padding: 20px;">Players</th>
+    <th style="border: 1px solid black; font-size: 35px; font-weight: Medium; text-align: center; padding: 20px;">Score</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 20px;"><?php echo $team_a_player_a; ?> and <?php echo $team_a_player_b; ?></td>
+    <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 20px; text-align: center;"><?php echo $score_a; ?></td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 20px;"><?php echo $team_b_player_a; ?> and <?php echo $team_b_player_b; ?></td>
+    <td style="border: 1px solid black; font-weight: normal; color: system-ui; padding: 20px; text-align: center;"><?php echo $score_b; ?></td>
+  </tr>
+</table>
+
 
 </div>
 
