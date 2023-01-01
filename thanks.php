@@ -206,6 +206,9 @@ font-weight: bold;
         if (this.readyState == 4 && this.status == 200) {
           // Display a message indicating that the match was deleted successfully
           alert(this.responseText);
+          // Redirect the user to the home page
+          window.location.replace("http://baby-foot-brussels.fun/");
+
         }
       };
       xhttp.open("GET", "delete-last-match.php", true);
