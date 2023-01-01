@@ -99,6 +99,9 @@ input[type="submit"] {
   text-align: center;
   border-color: #ffffff;
   background-color: #116AFF;
+  border-radius: 20px;
+  font-weight: bold; /* makes the text bolder */
+  
 }
 
 
