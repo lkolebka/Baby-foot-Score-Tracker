@@ -167,6 +167,36 @@ font-weight: bold;
   }
 </style>
 
+<!-- Wanna see all the matchs ? -->
+<h3 style="color: #242124;">Access the full table of results</h3>
+
+<!-- Button to see all the matchs  -->
+<button class="view-all-button" onclick="viewAllResults()">See all </button>
+<script>
+  function viewAllResults() {
+    window.location.href = '/all-matchs.php';
+  }
+</script>
+<style>
+ .view-all-button {
+    margin: 0 auto; /* centers the page horizontally */
+  color: #ffffff;
+  width: 80%;
+  height: 100px;
+  font-size: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 2.5%;
+  text-align: center;
+  background-color: #116AFF;
+  border-radius: 20px;
+
+  }
+</style>
+
 <script>
   function deleteLastMatch() {
     if (confirm('Are you sure you want to cancel the last match?')) {
@@ -189,8 +219,13 @@ font-weight: bold;
  <br>
  <br>
  <br>
-<form action="index.html">
-  <button class="button">Go back</button>
+
+ <button class="button" onclick="goBack()">Go back </button>
+  <script>
+  function goBack() {
+    window.location.href = 'http://baby-foot-brussels.fun/';
+  }
+</script>
 </form>
 
 </html>
